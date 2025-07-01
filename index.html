@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plex Style Grid UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="top-nav">
+
+    <div class="left">
+      <div class="logos">
+        <img src="plex-pride-logo.svg" alt="" class="logo">
+      </div>
+      <div class="search">
+        <span style="color: black;">&#128269;</span>
+        Find Movies & TV
+      </div>
+    </div>
+
+
+    <div class="middle">
+      <button class="icons" id="button">Home</button>
+      <div class="icons">Live TV</div>
+      <div class="icons">On Demand</div>
+      <div class="icons">Discover</div>
+    </div>
+
+
+    <div class="right">
+      <button class="sign-in">Sign In</button>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <section class="movie-row">
+      <div class="row-header">
+        <h2>Binge-Worthy Shows</h2>
+
+      </div>
+      <div class="movie-slider" id="row-1">
+      </div>
+    </section>
+
+    <section class="movie-row">
+      <div class="row-header">
+        <h2>Most Popular in India</h2>
+      
+      </div>
+      <div class="movie-slider" id="row-2">
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
