@@ -3,55 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Plex Style Grid UI</title>
+  <title>Plex Style Stream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script> 
 </head>
-
 <body>
-  <div class="top-nav">
-
-    <div class="left">
-      <div class="logos">
-        <img src="plex-pride-logo.svg" alt="" class="logo">
+  <nav class="top-nav">
+    <div class="nav-left">
+      <div class="logo-container">
+        <!-- Reusing existing logo -->
+        <img src="plex-pride-logo.svg" alt="Plex Logo" class="logo">
       </div>
-      <div class="search">
-        <span style="color: black;">&#128269;</span>
-        Find Movies & TV
+      <div class="nav-links">
+        <button class="nav-btn active"><i data-lucide="home"></i> Home</button>
+        <button class="nav-btn"><i data-lucide="tv"></i> Live TV</button>
+        <button class="nav-btn"><i data-lucide="film"></i> Movies</button>
+        <button class="nav-btn"><i data-lucide="compass"></i> Discover</button>
       </div>
     </div>
 
-
-    <div class="middle">
-      <button class="icons" id="button">Home</button>
-      <div class="icons">Live TV</div>
-      <div class="icons">On Demand</div>
-      <div class="icons">Discover</div>
+    <div class="nav-right">
+      <div class="search-bar">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" placeholder="Find Movies & TV..." />
+      </div>
+      <button class="sign-in-btn">Sign In</button>
     </div>
-
-
-    <div class="right">
-      <button class="sign-in">Sign In</button>
-    </div>
-  </div>
+  </nav>
 
   <main class="main-content">
-    <section class="movie-row">
-      <div class="row-header">
-        <h2>Binge-Worthy Shows</h2>
-
-      </div>
-      <div class="movie-slider" id="row-1">
-      </div>
-    </section>
-
-    <section class="movie-row">
-      <div class="row-header">
-        <h2>Most Popular in India</h2>
-      
-      </div>
-      <div class="movie-slider" id="row-2">
+    <!-- Hero Banner -->
+    <section class="hero-banner" id="hero-banner">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 id="hero-title">Discover Greatness</h1>
+        <p id="hero-desc">Explore the latest and greatest in entertainment.</p>
+        <div class="hero-actions">
+          <button class="btn-primary"><i data-lucide="play" fill="currentColor"></i> Play</button>
+          <button class="btn-secondary"><i data-lucide="info"></i> More Info</button>
+        </div>
       </div>
     </section>
+
+    <!-- Content Rows -->
+    <div class="content-container">
+      <section class="movie-row-section">
+        <div class="row-header">
+          <h2>Trending Now</h2>
+          <button class="see-all">See All <i data-lucide="chevron-right"></i></button>
+        </div>
+        <div class="slider-container">
+          <button class="slider-arrow left-arrow" aria-label="Scroll left"><i data-lucide="chevron-left"></i></button>
+          <div class="movie-slider" id="row-1">
+            <!-- Skeletons shown while loading -->
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+          </div>
+          <button class="slider-arrow right-arrow" aria-label="Scroll right"><i data-lucide="chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="movie-row-section">
+        <div class="row-header">
+          <h2>Top Rated TV Shows</h2>
+          <button class="see-all">See All <i data-lucide="chevron-right"></i></button>
+        </div>
+        <div class="slider-container">
+           <button class="slider-arrow left-arrow" aria-label="Scroll left"><i data-lucide="chevron-left"></i></button>
+          <div class="movie-slider" id="row-2">
+            <!-- Skeletons shown while loading -->
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+            <div class="loading-skeleton"></div>
+          </div>
+          <button class="slider-arrow right-arrow" aria-label="Scroll right"><i data-lucide="chevron-right"></i></button>
+        </div>
+      </section>
+    </div>
   </main>
 
   <script src="script.js"></script>
