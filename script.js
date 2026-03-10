@@ -199,3 +199,4 @@ window.addEventListener('scroll', () => {
 });
 
 loadMovies();
+// script
